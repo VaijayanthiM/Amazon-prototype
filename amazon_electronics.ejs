@@ -1,0 +1,112 @@
+
+<head>
+<style>
+table, th, td
+{
+border:1px solid black;
+padding:5px;
+}
+table
+{
+border-spacing:15px;
+}</style>
+</head>
+
+<div class="header">
+    <div class="right-red" style="background-color: #ed1b24; width: 25px; height: 195px;
+        float: right;">
+    </div>
+    
+    <div class="top_menubx">
+
+
+<% if(userID){%>
+        <div id="Top1_toplogin" class="top_menulist" style="font-weight: bold;">Hi, <%=userID%></div>
+<div id="Top1_toplogin" class="top_menulist" style="font-weight: bold;"><a href='/signout'>Signout</a></div>
+
+        
+        <div class="top_menulist" id="popCarth">
+            <div id="confirmCart">
+            </div>
+            <div id="popCart">
+            </div>
+            <div style="font-family: Lucida Sans Unicode,Lucida Grande,Garuda,sans-serif; font-weight: bold;
+                font-size: 14px; color: #9d0b0e; width: 120px; float: left;">
+                Shopping cart</div>
+            <div id="minicart" style="padding-left: 121px; float: left;">
+                <a href="/shoppingcart" style="width: 120px; float: left;">View Cart!</a></div>
+        </div>
+   <br>
+ 
+<div id="Top1_toplogin" class="top_menulist" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='/transactionhistory'>View Purchase History</a></div>
+</br>
+     
+        
+        
+    </div>
+<%}%>
+
+<%if (userID==''){%>
+<div id="Top1_toplogin" class="top_menulist" style="font-weight: bold;"><a href='/login'>Login</a></div>
+        <div id="Top1_topregister" class="top_menulist" style="font-weight: bold;"><a href='/signup'>Register</a></div>
+        <div class="top_menulist" id="popCarth">
+            <div id="confirmCart">
+            </div>
+            <div id="popCart">
+            </div>
+            <div style="font-family: Lucida Sans Unicode,Lucida Grande,Garuda,sans-serif; font-weight: bold;
+                font-size: 14px; color: #9d0b0e; width: 120px; float: left;">
+                Shopping cart</div>
+            <div id="minicart" style="padding-left: 121px; float: left;">
+                <a href="/shoppingcart" style="width: 120px; float: left;">View Cart!</a></div>
+        </div>
+        
+        
+        
+    </div>
+<%}%>
+    
+    <div class="middle_box">
+        <div class="midbx_logo">
+            <a href="/" title="" >
+                </a></div>
+        <div class="midbx_menubx">
+           
+            <div class="midbx_menulist searchsection">
+                <div style="clear: both; margin-bottom: 0px; padding: 2px 0px 10px 3px; float: right;">
+                    
+                </div>
+                
+                
+            </div>
+                    </div>
+        
+        
+        <span class="preload1"></span><span class="preload2"></span>
+        <ul id="nav" style="float: left; width: 797px;">
+            
+                    
+                <ul class="sub">
+                    <li><b>
+                        
+                        Shop by Category</b></li>
+<li><a class="fly" href="/">Browse for more! Go home!</a>
+                    <li><a class="fly" href="/index/<%=catalogitem%>"><%=catalogitem%></a>
+
+<ul>
+<table border="1" style="width:500px">
+
+<tr><td>Item <td>Description <td> Price <td> Stocks Left <td>  Add Item to Cart</tr>
+<tr><td><%=name0%>  <td> <%=desc0%> <td>  <%=price0%>  <td> <%=qty0%> <td> <a href=/index/<%=catalogitem%>/<%=name0%>> Add Item to Cart</tr></a>
+
+<tr><td><%=name1%>  <td> <%=desc1%> <td>  <%=price1%>  <td> <%=qty1%> <td> <a href=/index/<%=catalogitem%>/<%=name1%>> Add Item to Cart</tr></a>
+
+<tr><td><%=name2%>  <td> <%=desc2%> <td>  <%=price2%>  <td> <%=qty2%> <td> <a href=/index/<%=catalogitem%>/<%=name2%>> Add Item to Cart</a></tr>
+
+
+
+</ul>    </div>
+    
+</div>
+
+

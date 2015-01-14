@@ -1,0 +1,146 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+
+        <title>Amazon Prototype!</title>
+
+        <style>
+
+               body           { padding-top:80px; }
+
+        </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+ 
+
+        <div class="center">
+
+               <h1> Welcome to Amazon-Prototype!</h1>
+
+<div class="center">
+
+<p> The journey to an amazing world of purchases is just clicks away. But before you proceed, we need you to Login/Register!</p>
+</div>
+
+ 
+
+               <p>Login or Register with:</p>
+
+ 
+
+              
+
+        </div>
+
+ 
+
+</div>
+
+ <div class="right_showcase" style="position: absolute; width: 200px; top: 195px;
+                height: 388px; margin: 0px 0px 0px 749px; background-color: #ffffff; opacity: 0.7;
+                filter: alpha(opacity=70); color: #980203; font-family: Lucida Sans Unicode,Lucida Grande,Garuda,sans-serif;
+                font-weight: bold; font-size: 24px; padding: 0px; z-index: 1;">
+                <div class="bannercontent">
+                    Welcome to Amazon's all-new website
+                </div>
+                <div class="bannerblackcontent" style="color: #980203; font-weight: normal; font-family: Lucida Sans Unicode,Lucida Grande,Garuda,sans-serif;
+                    font-size: 12px;">
+                    A fresh new look, large display formats and clear product grouping -- Shopping for
+                    your favourite products is now easier and more fun than ever.
+                    <br />
+                    <br />
+                    <strong style="font-family: Lucida Sans Unicode,Lucida Grande,Garuda,sans-serif;
+                        font-weight: bold; font-size: 16px">See our latest offerings in </strong>
+                    <br />
+                    <ul style="margin: 0px; padding: 15px 0px 0px 15px; line-height: 15px;">
+                        <li><a href="/index/books">Books & Audible</a></li>
+                        <li><a href="/index/music">Music, Movies & Games</a></li>
+                        <li><a href="/index/electronics">Electronics & Computers</a></li>
+                        <li><a href="/index/garden">Home, Garden & Tools</a></li>
+                        <li><a href="/index/beauty">Beauty, Health & Grocery</a></li>
+			<li><a href="/index/baby">Toys, Kids & Baby</a></li></ul>
+                </div>
+                <div style="margin-top: 5px;">
+                    <br />
+                </div>
+                <div style="float: left; width: 36px; margin-top: 10px;">
+                </div>
+                <div style="float: right; width: 190px; font-weight: bold; margin-top: 10px;">
+                </div>
+            </div>
+
+
+<div class="header">
+<div class="right-red" style="background-color: #ed1b24; width: 25px; height: 195px;
+        float: right;">
+    </div>
+<%if (userID){%>    
+    <div class="top_menubx">
+        <div id="Top1_toplogin" class="top_menulist" style="font-weight: bold;"><font size="6">Hi, <%=userID%></font>  &nbsp;  <a href='/signout'>(Signout)</a></a></div>
+
+<%if(lastlogintime){%>
+
+<div id="Top1_topregister" class="top_menulist"><b><font size="5">Welcome back!</font></b> <font size="2">Your Last Login was : <%=lastlogintime%></font></div>
+
+<%} else{%>
+<div id="Top1_topregister" class="top_menulist"><b><font size="5">Welcome!</font></b> </div>
+<%}%>
+
+
+        <div class="top_menulist" id="popCarth">
+            <div id="confirmCart">
+            </div>
+            <div id="popCart">
+            </div>
+            <div style="font-family: Lucida Sans Unicode,Lucida Grande,Garuda,sans-serif; font-weight: bold;
+                font-size: 14px; color: #9d0b0e; width: 120px; float: left;">
+                Shopping cart</div>
+            <div id="minicart" style="padding-left: 121px; float: left;">
+                <a href="/shoppingcart" style="width: 120px; float: left;">View Cart!</a></div>
+        </div>
+<br>
+ 
+<div id="Top1_toplogin" class="top_menulist" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='/transactionhistory'>View Purchase History</a></div>
+</br>
+
+
+       
+
+<%}%>
+
+<%if (userID==''){%>
+<div id="Top1_toplogin" class="top_menulist" style="font-weight: bold;"><a href='/login'>Login</a></div>
+        <div id="Top1_topregister" class="top_menulist" style="font-weight: bold;"><a href='/signup'>Register</a></div>
+        <div class="top_menulist" id="popCarth">
+            <div id="confirmCart">
+            </div>
+            <div id="popCart">
+            </div>
+            <div style="font-family: Lucida Sans Unicode,Lucida Grande,Garuda,sans-serif; font-weight: bold;
+                font-size: 14px; color: #9d0b0e; width: 120px; float: left;">
+                Shopping cart</div>
+            <div id="minicart" style="padding-left: 121px; float: left;">
+                <a href="/shoppingcart" style="width: 120px; float: left;">View Cart!</a></div>
+        </div>
+        
+        
+        
+    </div>
+<%}%>
+
+        
+</div>
+
+</body>
+
+</html>
+
+ 

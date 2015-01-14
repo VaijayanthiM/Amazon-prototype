@@ -1,0 +1,146 @@
+
+<head>
+
+<style>
+table, th, td
+{
+border:1px solid black;
+padding:5px;
+}
+table
+{
+border-spacing:15px;
+}</style>
+</head>
+
+<div class="header">
+    <div class="right-red" style="background-color: #ed1b24; width: 25px; height: 195px;
+        float: right;">
+    </div>
+    
+<% if(userID){%>
+ 
+   <div id="Top1_toplogin" class="top_menulist" style="font-weight: bold;">Hi, <%=userID%></div>
+<div id="Top1_toplogin" class="top_menulist" style="font-weight: bold;"><a href='/signout'>Signout</a></div>
+
+        <div class="top_menulist" id="popCarth">
+            <div id="confirmCart">
+            </div>
+            <div id="popCart">
+            </div>
+            <div style="font-family: Lucida Sans Unicode,Lucida Grande,Garuda,sans-serif; font-weight: bold;
+                font-size: 14px; color: #9d0b0e; width: 120px; float: left;">
+                Shopping cart</div>
+            <div id="minicart" style="padding-left: 121px; float: left;">
+                <a href="/shoppingcart" style="width: 120px; float: left;">View Cart!</a></div>
+        </div>
+        
+   <br>
+ 
+<div id="Top1_toplogin" class="top_menulist" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='/transactionhistory'>View Purchase History</a></div>
+</br>
+     
+        
+    </div>
+
+<%}%>
+
+<%if (userID==''){%>
+<div id="Top1_toplogin" class="top_menulist" style="font-weight: bold;"><a href='/login'>Login</a></div>
+        <div id="Top1_topregister" class="top_menulist" style="font-weight: bold;"><a href='/signup'>Register</a></div>
+        <div class="top_menulist" id="popCarth">
+            <div id="confirmCart">
+            </div>
+            <div id="popCart">
+            </div>
+            <div style="font-family: Lucida Sans Unicode,Lucida Grande,Garuda,sans-serif; font-weight: bold;
+                font-size: 14px; color: #9d0b0e; width: 120px; float: left;">
+                Shopping cart</div>
+            <div id="minicart" style="padding-left: 121px; float: left;">
+                <a href="/shoppingcart" style="width: 120px; float: left;">View Cart!</a></div>
+        </div>
+        
+        
+        
+    </div>
+<%}%>
+    
+
+    
+    <div class="middle_box">
+        <div class="midbx_logo">
+            <a href="/" title="" >
+                </a></div>
+        <div class="midbx_menubx">
+           
+            <div class="midbx_menulist searchsection">
+                <div style="clear: both; margin-bottom: 0px; padding: 2px 0px 10px 3px; float: right;">
+                    
+                </div>
+                
+                
+            </div>
+                    </div>
+        
+        
+        <span class="preload1"></span><span class="preload2"></span>
+        <ul id="nav" style="float: left; width: 797px;">
+            
+                    
+                <ul class="sub">
+                    
+                    <li><b><a class="fly" href="/shoppingcart">Shopping Cart</a></b>
+<li><a class="fly" href="/">Browse for more! Go home!</a>
+
+
+<ul>
+
+<p>
+
+
+<ul>
+<table border="1" style="width:500px">
+
+<tr><td>Item <td>Description <td> Price <td> Quantity ordered <td>  Total Price <td> Do you wish to remove?</tr>
+
+<%for(var i=0; i<length;i++){ %>
+<tr><td><%=name[i]%>  <td> <%=desc[i]%> <td>  <%=price[i]%>  <td> <%=qty[i]%> <td> <%=totalPrice[i]%> <td> <a href="/index/<%=catalogitem[i]%>/<%=name[i]%>/<%=qty[i]%>/removefromcart"> Remove </a></tr></a>
+<%}%>
+
+<br>
+
+<tr><td><td><td><td><td><b>Total Amount to Pay: <%=amounttopay%></b>
+
+
+</ul>
+<p>
+</div>
+</div>
+
+
+
+<form action="/checkout" method="post">
+		
+<p>
+
+		<button type="submit" class="btn btn-warning btn-lg">Check Out!</button>
+
+	</form>
+
+<form action="/" method="get">
+		
+
+
+		<button type="submit" class="btn btn-warning btn-lg">Continue Shopping!</button>
+
+	</form>
+
+
+
+</ul>    
+    
+</div>
+
+
+
+

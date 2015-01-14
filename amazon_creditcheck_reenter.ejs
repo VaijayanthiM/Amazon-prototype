@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="/validatepayment" method="post">
+<fieldset>
+<legend>Personal information:</legend>
+Name: <input type="text" size="30"><br>
+E-mail: <input type="text" size="30"><br>
+Shipping address(line 1): <input type="text" size="20"><br>
+Shipping address(line 2): <input type="text" size="20"><br>
+
+
+</fieldset>
+
+
+<br>
+<br>
+<fieldset>
+<legend>Credit Card Information:</legend>
+Card Type: 
+<select name="cardtype">
+<option value="Master Card">Master Card</option>
+<option value="VISA">VISA</option>
+</select>
+<br>
+Credit Card Number: <input type="number" size="4" name="cc1"><input type="number" size="4" name ="cc2"><input type="number" size="4" name="cc3"><input type="number" size="4" name="cc4"><br>
+Expiry Date:<tr>
+<td>Date:</td><td>
+<select>
+  <option value ="1">1</option>
+  <option value ="2">2</option>
+  <option value ="3">3</option>
+  <option value ="4">4</option>
+  <option value ="5">5</option>
+  <option value ="6">6</option>
+  <option value ="7">7</option>
+  <option value ="8">8</option>
+  <option value ="9">9</option>
+  <option value ="10">10</option>
+  <option value ="11">11</option>
+  <option value ="12">12</option>
+  <option value ="13">13</option>
+  <option value ="14">14</option>
+  <option value ="15">15</option>
+  <option value ="16">16</option>
+  <option value ="17">17</option>
+  <option value ="18">18</option>
+  <option value ="19">19</option>
+  <option value ="20">20</option>
+  <option value ="21">21</option>
+  <option value ="22">22</option>
+  <option value ="23">23</option>
+  <option value ="24">24</option>
+  <option value ="25">25</option>
+  <option value ="26">26</option>
+  <option value ="27">27</option>
+  <option value ="28">28</option>
+  <option value ="29">29</option>
+  <option value ="30">30</option>
+  <option value ="31">31</option>
+</select>
+</td>
+<td>Month:</td>
+<td>
+<select>
+  <option value ="Jan">Jan</option>
+  <option value ="Feb">Feb</option>
+  <option value ="Mar">Mar</option>
+  <option value ="Apr">Apr</option>
+  <option value ="May">May</option>
+  <option value ="Jun">Jun</option>
+  <option value ="Jul">Jul</option>
+  <option value ="Aug">Aug</option>
+  <option value ="Sep">Sep</option>
+  <option value ="Oct">Oct</option>
+  <option value ="Nov">Nov</option>
+  <option value ="Dec">Dec</option>
+</select>
+</td>
+<td>Year:<input type="number" size="4" name="year"><br>
+</td>
+<td>
+CVV: <input type="number" size="3" name ="cvv"><br>
+</fieldset>
+
+<p>
+<b>Amount to pay:<%=totalPrice%>$</b>
+
+<p>
+<button type="submit" class="btn btn-warning btn-lg">Make Payment!</button><font color="red">Check the values again!</font>
+
+</form>
+
+</body>
+</html>

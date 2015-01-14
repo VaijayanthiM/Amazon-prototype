@@ -1,0 +1,102 @@
+<html>
+<head>
+<style>
+table, th, td
+{
+border:1px solid black;
+padding:5px;
+}
+table
+{
+border-spacing:15px;
+}</style>
+</head>
+
+
+<div class="header">
+    <div class="right-red" style="background-color: #ed1b24; width: 25px; height: 195px;
+        float: right;">
+    </div>
+<div id="Top1_toplogin" class="top_menulist" style="font-weight: bold;">Hi, <%=userID%></div>
+<div id="Top1_toplogin" class="top_menulist" style="font-weight: bold;"><a href='/signout'>Signout</a></div>
+
+        <div class="top_menulist" id="popCarth">
+            <div id="confirmCart">
+            </div>
+            <div id="popCart">
+            </div>
+            <div style="font-family: Lucida Sans Unicode,Lucida Grande,Garuda,sans-serif; font-weight: bold;
+                font-size: 14px; color: #9d0b0e; width: 120px; float: left;">
+                Shopping cart</div>
+            <div id="minicart" style="padding-left: 121px; float: left;">
+                <a href="/shoppingcart" style="width: 120px; float: left;">View Cart!</a></div>
+        </div>
+        
+   <br>
+ 
+<div id="Top1_toplogin" class="top_menulist" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='/transactionhistory'>View Purchase History</a></div>
+</br>
+
+     
+        
+    </div>
+
+    <div class="middle_box">
+        <div class="midbx_logo">
+            <a href="/" title="" >
+                </a></div>
+        <div class="midbx_menubx">
+           
+            <div class="midbx_menulist searchsection">
+                <div style="clear: both; margin-bottom: 0px; padding: 2px 0px 10px 3px; float: right;">
+                    
+                </div>
+                
+                
+            </div>
+                    </div>
+        
+        
+        <span class="preload1"></span><span class="preload2"></span>
+        <ul id="nav" style="float: left; width: 797px;">
+            
+                    
+                <ul class="sub">
+                    
+ <a href="/"><font color="red"><b> Home </b></font></a>
+                   <li><b><a class="fly" href="/shoppingcart">Shopping Cart</a></b>
+<li><b><a class="fly" href="/transactionhistory">Purchase History</a></b>
+
+
+
+
+<ul>
+
+<p>
+
+
+<ul>
+<ul>
+<table border="1" style="width:500px">
+
+
+<tr><td>Item <td>Description <td> Price <td> Quantity ordered <td>  Total Price </tr>
+
+<%for(var i=0; i<length;i++){ %>
+<tr><td><%=name[i]%>  <td> <%=desc[i]%> <td>  <%=price[i]%>  <td> <%=qty[i]%> <td> <%=totalPrice[i]%> </tr></a>
+<%}%>
+
+<br>
+
+<tr><td><td><td><td><td><b>Total Amount Paid: <%=amounttopay%></b></tr>
+
+</ul>
+<p>
+</div>
+</div>
+
+
+
+
+
+</html>
